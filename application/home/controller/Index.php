@@ -50,8 +50,6 @@ class Index extends Base {
         	$cat_path = explode('_', $v['parent_id_path']);
         	$hot_cate[$cat_path[1]][] = $v;
         }
-        var_dump($this);
-        var_dump($this->cateTrre);
         foreach ($this->cateTrre as $k=>$v){
             if($v['is_hot']==1){
         		$v['hot_goods'] = empty($hot_goods[$k]) ? '' : $hot_goods[$k];
